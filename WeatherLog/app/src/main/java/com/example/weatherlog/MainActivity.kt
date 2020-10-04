@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.weatherlog.adapter.CityListAdapter
 import com.example.weatherlog.model.Weather
+import com.example.weatherlog.model.WeatherData
 import com.example.weatherlog.viewmodel.ViewModelProviderFactory
 
 import com.example.weatherlog.viewmodel.WeatherViewModel
@@ -19,13 +20,15 @@ class MainActivity : AppCompatActivity(), CityListAdapter.RecyclerViewItemClick 
     lateinit var weatherViewModel: WeatherViewModel
     private  lateinit var viewModelFactory: ViewModelProviderFactory
     private lateinit var cityListAdapter: CityListAdapter
+    private lateinit var weatherList: List<Weather>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        recyclerView.layoutManager = LinearLayoutManager(this)
-
+        val llm = LinearLayoutManager(this)
+        llm.reverseLayout = true
+        recyclerView.layoutManager = llm
         cityListAdapter = CityListAdapter(itemClickListener = this)
         recyclerView.adapter = cityListAdapter
 
@@ -34,10 +37,12 @@ class MainActivity : AppCompatActivity(), CityListAdapter.RecyclerViewItemClick 
         weatherViewModel.getAllWeather().observe(this, Observer{
             cityListAdapter.weatherData = it
             cityListAdapter.notifyDataSetChanged()
+            weatherList = it
         })
 
         floatingSaveButton.setOnClickListener {
             weatherViewModel.getWeather()
+            recyclerView.smoothScrollToPosition(weatherList.size - 1)
         }
     }
 

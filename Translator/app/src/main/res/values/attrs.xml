@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ds">
+        <attr name="backgroundColor" format="color"/>
+        <attr name="buttonColor" format="color"/>
+        <attr name="sendMessageColor" format="color"/>
+        <attr name="iconColor" format="color"/>
+        <attr name="textColor" format="color"/>
+        <attr name="backgroundImage" format="reference"/>
+        <attr name="icon" format="reference"/>
+        <attr name="labelTextColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="VideoPlayerView">
+        <attr name="isSeekBarVisible" format="boolean"/>
+        <attr name="isPlayButtonVisible" format="boolean"/>
+        <attr name="isPauseButtonVisible" format="boolean"/>
+        <attr name="isTitleTextViewVisible" format="boolean"/>
+        <attr name="isViewBackVisible" format="boolean"/>
+    </declare-styleable>
+</resources>

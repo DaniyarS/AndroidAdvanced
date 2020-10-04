@@ -3,9 +3,12 @@ package com.example.weatherlog.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.weatherlog.R
+import com.example.weatherlog.databinding.WeatherItemBinding
 import com.example.weatherlog.model.Weather
+import com.example.weatherlog.model.WeatherData
 import kotlinx.android.synthetic.main.weather_item.view.*
 
 class CityListAdapter (
@@ -16,37 +19,28 @@ class CityListAdapter (
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): CityListAdapter.WeatherViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.weather_item, parent, false)
-        return WeatherViewHolder(view)
-    }
+    ): CityListAdapter.WeatherViewHolder =
+        WeatherViewHolder(
+            DataBindingUtil.inflate(
+                LayoutInflater.from(parent.context),
+                R.layout.weather_item,
+                parent,
+                false
+            )
+        )
 
     override fun getItemCount(): Int {
         return weatherData?.size ?: 0
     }
 
     override fun onBindViewHolder(holder: CityListAdapter.WeatherViewHolder, position: Int) {
-        weatherData?.get(position)?.let { holder.bind(it) }
-    }
-
-    inner class WeatherViewHolder(private val view: View): RecyclerView.ViewHolder(view) {
-
-        private val cityName = itemView.tvCityName
-        private val weatherIndex = itemView.tvWeatherIndex
-        private val tempIndex = itemView.tvTemperatureIndex
-        private val timeIndex = itemView.tvTimeIndex
-
-        fun bind(weatherData: Weather) {
-            cityName.text = weatherData.cityName
-            weatherIndex.text = weatherData.weather
-            tempIndex.text = weatherData.temp
-            timeIndex.text = weatherData.time
-
-            view.setOnClickListener {
-                itemClickListener?.itemClick(adapterPosition, weatherData)
-            }
+        holder.weatherItemBinding.weatherData = weatherData?.get(position)!!
+        holder.itemView.setOnClickListener {
+            itemClickListener?.itemClick(position, weatherData!![position])
         }
     }
+
+    inner class WeatherViewHolder(val weatherItemBinding: WeatherItemBinding): RecyclerView.ViewHolder(weatherItemBinding.root)
 
     interface RecyclerViewItemClick {
         fun itemClick(position: Int, item: Weather?)
