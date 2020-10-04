@@ -8,15 +8,16 @@ import com.example.weatherlog.WeatherRepository
 import com.example.weatherlog.model.Weather
 import com.example.weatherlog.api.WeatherApiService
 import kotlinx.coroutines.*
+import org.koin.java.KoinJavaComponent.inject
 import java.lang.Exception
 import java.util.*
 import kotlin.coroutines.CoroutineContext
 
 private const val WEATHER_API_KEY = "95f030374fc4e045e0c947058469c373"
 
-class WeatherViewModel(application: Application) : AndroidViewModel(application), CoroutineScope {
+class WeatherViewModel(application: Application, private val repository: WeatherRepository) : AndroidViewModel(application), CoroutineScope {
 
-    private val repository = WeatherRepository(application)
+//    private val repository = WeatherRepository(application)
     private val allWeather = repository.getAllWeather()
     private val job = Job()
 

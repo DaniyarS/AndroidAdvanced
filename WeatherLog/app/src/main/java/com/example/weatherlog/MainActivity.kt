@@ -8,17 +8,17 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.weatherlog.adapter.CityListAdapter
 import com.example.weatherlog.model.Weather
-import com.example.weatherlog.model.WeatherData
 import com.example.weatherlog.viewmodel.ViewModelProviderFactory
 
 import com.example.weatherlog.viewmodel.WeatherViewModel
 import kotlinx.android.synthetic.main.activity_main.*
+import org.koin.android.ext.android.get
+
 
 const val WEATHER_KEY = "weatherData"
 class MainActivity : AppCompatActivity(), CityListAdapter.RecyclerViewItemClick {
 
     lateinit var weatherViewModel: WeatherViewModel
-    private  lateinit var viewModelFactory: ViewModelProviderFactory
     private lateinit var cityListAdapter: CityListAdapter
     private lateinit var weatherList: List<Weather>
 
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity(), CityListAdapter.RecyclerViewItemClick 
         cityListAdapter = CityListAdapter(itemClickListener = this)
         recyclerView.adapter = cityListAdapter
 
-        viewModelFactory = ViewModelProviderFactory(application)
+        val viewModelFactory = get<ViewModelProviderFactory>()
         weatherViewModel = ViewModelProvider(this, viewModelFactory).get(WeatherViewModel::class.java)
         weatherViewModel.getAllWeather().observe(this, Observer{
             cityListAdapter.weatherData = it
