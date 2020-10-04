@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WeatherLog</string>
+    <string name="city_name">City Name</string>
+    <string name="weather">Weather:</string>
+    <string name="temperature">Temperature:</string>
+    <string name="feelsLike">Feels like:</string>
+    <string name="pressure">Pressure:</string>
+    <string name="time">Time:</string>
+</resources>
