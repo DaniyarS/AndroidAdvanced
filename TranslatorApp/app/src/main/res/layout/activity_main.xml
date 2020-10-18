@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.activities.MainActivity">
 
     <FrameLayout
         android:id="@+id/mainContainer"
@@ -23,4 +23,5 @@
         app:labelVisibilityMode="unlabeled"
         android:elevation="10dp"
         app:menu="@menu/bottom_nav_menu_items"/>
+
 </LinearLayout>

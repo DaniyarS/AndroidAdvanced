@@ -1,0 +1,81 @@
+<resources>
+    <!-- Base application theme. -->
+    <!-- Base application theme. -->
+    <style name="DayTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="backgroundColor">@color/colorBackground</item>
+        <item name="icon">@drawable/ic_day_mode_icon</item>
+        <item name="backgroundImage">@drawable/background</item>
+        <item name="buttonColor">@color/colorButton</item>
+        <item name="textColor">@color/colorTextMessage</item>
+        <item name="iconColor">@color/colorIcon</item>
+        <item name="sendMessageColor">@color/colorSendMessage</item>
+        <item name="labelTextColor">@color/colorTextLabel</item>
+        <item name="android:windowAnimationStyle">@style/windowAnimationTransaction</item>
+        <item name="android:actionMenuTextColor">@color/colorPrimary</item>
+
+        <item name="android:dropDownListViewStyle">@style/PopupMenuListView</item>
+        <item name="android:actionBarWidgetTheme">@style/PopupMenuTextView</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+
+        <!-- Change Overflow Menu ListView Item Height & Property -->
+        <item name="android:listPreferredItemHeightSmall">40dp</item>
+        <item name="android:listPreferredItemPaddingLeft">5dp</item>
+        <item name="android:listPreferredItemPaddingRight">5dp</item>
+    </style>
+
+    <style name="NightTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryDarkMode</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">#DB7517</item>
+        <item name="backgroundColor">@color/colorBackgroundDarkMode</item>
+        <item name="icon">@drawable/ic_night_mode_icon</item>
+        <item name="backgroundImage">@drawable/night_background</item>
+        <item name="buttonColor">@color/colorPrimaryDarkMode</item>
+        <item name="textColor">@color/colorTextMessageDarkMode</item>
+        <item name="iconColor">@color/colorIconDarkMode</item>
+        <item name="sendMessageColor">@color/colorSendMessageDarkMode</item>
+        <item name="labelTextColor">@color/colorIconDarkMode</item>
+        <item name="android:windowAnimationStyle">@style/windowAnimationTransaction</item>
+    </style>
+
+    <style name="windowAnimationTransaction">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="snackbar_style"  parent="@style/Widget.MaterialComponents.Snackbar">
+        <item name="background"> @color/colorIcon </item>
+        <item name="animationMode">slide</item>
+    </style>
+
+    <!-- Change Overflow Menu ListView Divider Property -->
+    <style name="PopupMenuListView" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:divider">#CECECE</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <!-- Change Overflow Menu ListView Text Size and Text Size -->
+    <style name="PopupMenuTextView" parent="@android:style/Theme.Holo.Light">
+        <item name="textColor">@color/colorPrimary</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- Change Overflow Menu Background -->
+    <style name="PopupMenu" parent="android:Widget.Holo.Light.ListPopupWindow">
+        <item name="android:popupBackground">#FFF</item>
+        <item name="android:dropDownWidth">100dp</item>
+    </style>
+
+    <style name="TabLayoutTextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+</resources>
