@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/ic_content_copy_black_24dp"
+        android:title="Kóshіrý"
+        android:visible="true" />
+    <item
+        android:icon="@drawable/ic_share_black_24dp"
+        android:title="Bólіsý"
+        android:visible="true" />
+    <item
+        android:icon="@drawable/ic_send_to_trash_1"
+        android:title="Óshіrý"
+        android:visible="true" />
+    <item
+        android:icon="@drawable/ic_favorite_black_24dp"
+        android:title="Unaǵandar tіzіmіne qosý"
+        android:visible="true" />
+</menu>

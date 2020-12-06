@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clipToPadding="false"
+    android:id="@+id/accountFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.AccountFragment"
+        android:background="?attr/backgroundColor">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/backgroundColor"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleMarginStart="30dp"
+            app:titleTextColor="#808080">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="5"
+                    android:text="Jeke paraq"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="?attr/labelTextColor" />
+
+                <ImageView
+                    android:id="@+id/moreButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/buttonColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <ImageView
+            android:id="@+id/turtleImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/tasbaka"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <TextView
+            android:id="@+id/authTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Авторизация жасау"
+            android:textColor="?attr/textColor"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/turtleImage" />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/signInButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/authTextView"
+            app:layout_constraintStart_toStartOf="@+id/authTextView"
+            app:layout_constraintTop_toBottomOf="@+id/authTextView" />
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/avatarImageView"-->
+        <!--            android:layout_width="140dp"-->
+        <!--            android:layout_height="140dp"-->
+        <!--            android:layout_marginStart="135dp"-->
+        <!--            android:layout_marginTop="145dp"-->
+        <!--            android:layout_marginEnd="135dp"-->
+        <!--            android:background="@drawable/avatar_shape"-->
+        <!--            android:elevation="4dp"-->
+        <!--            android:scaleType="fitXY"-->
+        <!--            android:visibility="gone"-->
+        <!--            app:layout_constraintCircleRadius="15dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/nameTextView"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="16dp"-->
+        <!--            android:textColor="?attr/textColor"-->
+        <!--            app:layout_constraintEnd_toEndOf="@+id/avatarImageView"-->
+        <!--            app:layout_constraintStart_toStartOf="@+id/avatarImageView"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/avatarImageView" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/emailTextView"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:textColor="?attr/textColor"-->
+        <!--            app:layout_constraintEnd_toEndOf="@+id/avatarImageView"-->
+        <!--            app:layout_constraintStart_toStartOf="@+id/avatarImageView"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/nameTextView" />-->
+
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/infoTextLabel"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="44dp"-->
+        <!--            android:layout_marginTop="12dp"-->
+        <!--            android:layout_marginEnd="12dp"-->
+        <!--            android:background="?attr/backgroundColor"-->
+        <!--            android:elevation="4dp"-->
+        <!--            android:foregroundGravity="center_vertical"-->
+        <!--            android:paddingStart="20dp"-->
+        <!--            android:paddingTop="10dp"-->
+        <!--            android:paddingBottom="8dp"-->
+        <!--            android:text="Жеке статистика"-->
+        <!--            android:textColor="?attr/textColor"-->
+        <!--            android:textSize="16sp"-->
+        <!--            android:visibility="gone"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/emailTextView" />-->
+
+        <!--        <Button-->
+        <!--            android:id="@+id/signOutButton"-->
+        <!--            android:layout_width="130dp"-->
+        <!--            android:layout_height="44dp"-->
+        <!--            android:layout_marginTop="24dp"-->
+        <!--            android:background="?attr/backgroundColor"-->
+        <!--            android:text="шығу"-->
+        <!--            android:textColor="#AF2929"-->
+        <!--            android:visibility="gone"-->
+        <!--            app:layout_constraintStart_toStartOf="@+id/totalTimeSpentLabel"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/totalTimeSpentLabel" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/totalWordLabel"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="12dp"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:fontFamily="sans-serif-thin"-->
+        <!--            android:text="Аударылған сөздер саны:"-->
+        <!--            android:textAppearance="@style/TextAppearance.AppCompat.Display1"-->
+        <!--            android:textColor="?attr/textColor"-->
+        <!--            android:textSize="16sp"-->
+        <!--            android:visibility="gone"-->
+        <!--            app:layout_constraintStart_toStartOf="@+id/infoTextLabel"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/infoTextLabel" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/totalWordsTextView"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="12dp"-->
+        <!--            android:fontFamily="sans-serif-light"-->
+        <!--            android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+        <!--            android:textColor="?attr/textColor"-->
+        <!--            android:textSize="16sp"-->
+        <!--            android:visibility="gone"-->
+        <!--            app:layout_constraintEnd_toEndOf="@+id/infoTextLabel"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/infoTextLabel" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/totalTimeSpentLabel"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:fontFamily="sans-serif-thin"-->
+        <!--            android:text="Қосымшада өтікзген уақыт саны:"-->
+        <!--            android:textColor="?attr/textColor"-->
+        <!--            android:textSize="16sp"-->
+        <!--            android:visibility="gone"-->
+        <!--            app:layout_constraintStart_toStartOf="@+id/totalWordLabel"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/totalWordLabel" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/totalTimeSpentTextView"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:fontFamily="sans-serif-light"-->
+        <!--            android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+        <!--            android:textColor="?attr/textColor"-->
+        <!--            android:textSize="16sp"-->
+        <!--            android:visibility="gone"-->
+        <!--            app:layout_constraintEnd_toEndOf="@+id/totalWordsTextView"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/totalTimeSpentLabel" />-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

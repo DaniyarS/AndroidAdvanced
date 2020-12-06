@@ -4,4 +4,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="snackbar"> Oshirildi</string>
     <string name="snackbar_action">Keri qaitaru</string>
+    <string name="toolbar_title">Кириллица - Latynsha</string>
 </resources>

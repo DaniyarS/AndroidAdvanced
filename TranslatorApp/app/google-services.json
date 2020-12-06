@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1082476345817",
+    "project_id": "translatorapp-f2df1",
+    "storage_bucket": "translatorapp-f2df1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082476345817:android:1c9adf39de07e8258c01c8",
+        "android_client_info": {
+          "package_name": "com.daniyars.translatorapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082476345817-8p84amsafvek91bpqtcic6ru1jhqli09.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.daniyars.translatorapp",
+            "certificate_hash": "b9a1d66898dd37ba0d65eee5fea2d9643a3ce56a"
+          }
+        },
+        {
+          "client_id": "1082476345817-etgc5bi23r8let2bkuu4dev3qnu5dqgr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAz6oQSF3r7MTZLziJwvGAM8jrXIYbBoTw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1082476345817-etgc5bi23r8let2bkuu4dev3qnu5dqgr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

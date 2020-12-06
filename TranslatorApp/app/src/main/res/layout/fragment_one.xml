@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.dashboard.OneFragment"
+    android:background="?attr/backgroundColor">
+
+    <Button
+        android:id="@+id/signOutButton"
+        android:layout_width="130dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:background="?attr/backgroundColor"
+        android:text="шығу"
+        android:textColor="#AF2929"
+        app:layout_constraintStart_toStartOf="@+id/totalTimeSpentLabel"
+        app:layout_constraintTop_toBottomOf="@+id/totalTimeSpentLabel" />
+
+    <TextView
+        android:id="@+id/totalWordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="Аударылған сөздер саны:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="?attr/textColor"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/totalTimeSpentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif-light"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="?attr/textColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/totalTimeSpentLabel" />
+
+    <TextView
+        android:id="@+id/totalTimeSpentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="Қосымшада өтікзген уақыт саны:"
+        android:textColor="?attr/textColor"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/totalWordLabel"
+        app:layout_constraintTop_toBottomOf="@+id/totalWordLabel" />
+
+    <TextView
+        android:id="@+id/totalWordsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="?attr/textColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/totalTimeSpentTextView"
+        app:layout_constraintTop_toTopOf="@+id/totalWordLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
